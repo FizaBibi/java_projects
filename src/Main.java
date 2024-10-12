@@ -37,6 +37,7 @@ public class Main {
         System.out.println("Enter 28 to prints the prime numbers between 1 and 100.");
         System.out.println("Enter 29 to checks if a given number is a perfect number.");
         System.out.println("Enter 30 to simulates a simple ATM. The user should be able to deposit, withdraw,and check the balance");
+        System.out.println("Enter 31 to count the number of words in a given sentence or paragraph.");
         System.out.println("Enter your choice:");
         choice = sc.nextInt();
         switch (choice) {
@@ -160,10 +161,12 @@ public class Main {
             }
             case 26:
             {
+                secondLargest();
                 break;
             }
             case 27:
             {
+
                 break;
             }
             case 28:
@@ -176,6 +179,11 @@ public class Main {
             }
             case 30:
             {
+                break;
+            }
+            case 31:
+            {
+                countWords();
                 break;
             }
             default:
@@ -627,9 +635,28 @@ public class Main {
         System.out.println("The sum of 1 to "+num+ "even numbers are "+sum);
     }
 
+    public static void secondLargest()
+    {
 
+    }
 
+    public static void countWords()
+    {
+        String input;
+        int count=0; //to count the number of words in the sentence
+        sc.nextLine();
+        System.out.println("Enter a sentence or paragraph:");
+        input=sc.nextLine();
 
+        String[] words=input.split("\\s"); //split the sentence into words
+        for(int i=0;i< words.length;i++)
+        {
+            count++;
+            //System.out.println(words[i]);
+        }
+        System.out.println("The number of words in the sentence is: "+count);
 
-
+    }
     }//end of class
+
+
